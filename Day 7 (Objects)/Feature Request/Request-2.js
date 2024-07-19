@@ -19,10 +19,11 @@ let book1 = {
     }
 };
 
+
 let book2 = {
     title: "Eloquent JavaScript",
     author: "Marijn Haverbeke",
-    year: 2011,
+    year: 2012,
     getDetails: function() {
         return `${this.title} by ${this.author}`;
     },

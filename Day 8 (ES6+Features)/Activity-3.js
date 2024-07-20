@@ -6,9 +6,20 @@ Task 6: Use the rest operator in a function to accept an arbitrary number of arg
 
 // Task-5
 
-function array(...a) {
-    return a;
-}
+const existingArray = [1, 2, 3];
+const additionalElements = [4, 5, 6];
+const newArray = [...existingArray, ...additionalElements];
 
-let output = array(2,3,4,5,6,7);
-console.log(output);
+console.log(newArray); 
+
+
+// Task-6
+
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+  }
+  
+console.log(sum(1, 2, 3)); 
+console.log(sum(4, 5, 6, 7)); 
+console.log(sum(8, 9)); 
+  

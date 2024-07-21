@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-2</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <script>
+
+        // Task 3: Create a new div element with some text content and append it to the body
+        const newDiv = document.createElement("div");
+        newDiv.innerText = "This is a new div element.";
+        document.body.appendChild(newDiv);
+
+        // Task 4: Create a new li element and add it to an existing ul list
+        const newListItem = document.createElement("li");
+        newListItem.innerText = "Item 3";
+        document.getElementById("list").appendChild(newListItem);
+    </script>
+</body>
+</html>

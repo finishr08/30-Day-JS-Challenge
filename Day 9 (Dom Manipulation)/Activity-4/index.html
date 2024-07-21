@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-4</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" src="oldImage.jpg" alt="Old Image">
+    <div id="myDiv">This div will have a class added and removed.</div>
+
+    <script>
+        // Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag)
+        const image = document.getElementById("myImage");
+        image.src = "newImage.jpg";
+
+        // Task 8: Add and remove a CSS class to/from an HTML element
+        const div = document.getElementById("myDiv");
+        div.classList.add("highlight");  // Adding the class
+        setTimeout(() => {
+            div.classList.remove("highlight");  // Removing the class after 3 seconds
+        }, 3000);
+    </script>
+</body>
+</html>

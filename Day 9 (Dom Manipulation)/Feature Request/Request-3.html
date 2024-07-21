@@ -1,0 +1,32 @@
+<!-- 3. Element Removal Script: Write a script that selects an HTML element and removes it from the DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actvity-3</title>
+</head>
+<body>
+    <div id="removeMe">This div will be removed.</div>
+    <ul id="parentList">
+        <li>Child 1</li>
+        <li>Child 2</li>
+        <li>Child 3</li>
+    </ul>
+
+    <script>
+        // Task 5: Select an HTML element and remove it from the DOM
+        const elementToRemove = document.getElementById("removeMe");
+        if (elementToRemove) {
+            elementToRemove.remove();
+        }
+
+        // Task 6: Remove the last child of a specific HTML element
+        const parentList = document.getElementById("parentList");
+        if (parentList && parentList.lastChild) {
+            parentList.removeChild(parentList.lastChild);
+        }
+    </script>
+</body>
+</html>

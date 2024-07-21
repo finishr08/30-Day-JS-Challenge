@@ -1,0 +1,36 @@
+<!-- 5. Event Handling Script: Write a script that adds event listeners to HTML elements to change their content or style based on user interactions  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-5</title>
+    <style>
+        .highlight-border {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeTextButton">Change Text</button>
+    <p id="textParagraph">This is the original text.</p>
+    <div id="hoverElement" style="width: 100px; height: 100px; border: 2px solid black;">Hover over me</div>
+
+    <script>
+        // Task 9: Add a click event listener to a button that changes the text content of a paragraph
+        document.getElementById("changeTextButton").addEventListener("click", function() {
+            document.getElementById("textParagraph").innerText = "The text has been changed!";
+        });
+
+        // Task 10: Add a mouseover event listener to an element that changes its border color
+        document.getElementById("hoverElement").addEventListener("mouseover", function() {
+            this.classList.add("highlight-border");
+        });
+
+        document.getElementById("hoverElement").addEventListener("mouseout", function() {
+            this.classList.remove("highlight-border");
+        });
+    </script>
+</body>
+</html>

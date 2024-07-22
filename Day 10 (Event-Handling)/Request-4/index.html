@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="dropdown">Select an option:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p id="selectedValue">Selected Value: </p>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const dropdown = document.getElementById('dropdown');
+        const selectedValue = document.getElementById('selectedValue');
+
+        // Task 7: Submit event to prevent default submission and log form data
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the form from submitting the traditional way
+
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            console.log('Form data:', data);
+        });
+
+        // Task 8: Change event to display the selected value in a paragraph
+        dropdown.addEventListener('change', function() {
+            selectedValue.textContent = 'Selected Value: ' + dropdown.value;
+        });
+    </script>
+</body>
+</html>

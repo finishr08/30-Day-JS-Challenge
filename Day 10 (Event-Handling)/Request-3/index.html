@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events Example</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type something...">
+    <p id="displayText">Current Value: </p>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const displayText = document.getElementById('displayText');
+
+        // Task 5: Keydown event to log the key pressed to the console
+        textInput.addEventListener('keydown', function(event) {
+            console.log('Key pressed:', event.key);
+        });
+
+        // Task 6: Keyup event to display the current value in a paragraph
+        textInput.addEventListener('keyup', function() {
+            displayText.textContent = 'Current Value: ' + textInput.value;
+        });
+    </script>
+</body>
+</html>

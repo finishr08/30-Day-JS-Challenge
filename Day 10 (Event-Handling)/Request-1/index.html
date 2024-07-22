@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        #myImage {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Change Text</button>
+    <p id="myParagraph">Original Text</p>
+    <img id="myImage" src="https://via.placeholder.com/200" alt="Placeholder Image">
+
+    <script>
+        // Task 1: Click event to change the text content of a paragraph
+        document.getElementById('myButton').addEventListener('click', function() {
+            document.getElementById('myParagraph').textContent = 'Text has been changed!';
+        });
+
+        // Task 2: Double-click event to toggle image visibility
+        document.getElementById('myImage').addEventListener('dblclick', function() {
+            const img = document.getElementById('myImage');
+            img.style.display = img.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
